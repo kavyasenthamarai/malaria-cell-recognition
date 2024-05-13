@@ -33,9 +33,9 @@ Model performance is evaluated using testing data.
 
 ## PROGRAM
 
-### Name: RAMA E.K. LEKSHMI
+### Name: KAVYA K
 
-### Register Number: 212222240082
+### Register Number: 212222230065
 
 ```
 import tensorflow as tf
@@ -73,8 +73,7 @@ os.listdir(train_path+'/parasitized')[0]
 para_img= imread(train_path+
                  '/parasitized/'+
                  os.listdir(train_path+'/parasitized')[0])
-print("RAMA E.K. LEKSHMI")
-print("212222240082")
+
 plt.imshow(para_img)
 # Checking the image dimensions
 dim1 = []
@@ -139,21 +138,17 @@ results = model.fit(train_image_gen,epochs=2,
                              )
 model.save('cell_model.h5')
 losses = pd.DataFrame(model.history.history)
-print("RAMA E.K. LEKSHMI")
-print("212222240082")
+
 losses[['loss','val_loss']].plot()
 model.metrics_names
-print("RAMA E.K. LEKSHMI")
-print("212222240082")
+
 model.evaluate(test_image_gen)
 pred_probabilities = model.predict(test_image_gen)
 test_image_gen.classes
 predictions = pred_probabilities > 0.5
-print("RAMA E.K. LEKSHMI")
-print("212222240082")
+
 print(classification_report(test_image_gen.classes,predictions))
-print("RAMA E.K. LEKSHMI")
-print("212222240082")
+
 confusion_matrix(test_image_gen.classes,predictions)
 ```
 
@@ -161,22 +156,23 @@ confusion_matrix(test_image_gen.classes,predictions)
 
 ### Training Loss, Validation Loss Vs Iteration Plot
 
-![image](https://github.com/Rama-Lekshmi/malaria-cell-recognition/assets/118541549/5011a2b6-f02d-48e1-bab2-e87550c44174)
+![image](https://github.com/kavyasenthamarai/malaria-cell-recognition/assets/118668727/11c214fa-5d71-4b75-a033-b42560f1c424)
+
 
 
 ### Classification Report
 
-![image](https://github.com/Rama-Lekshmi/malaria-cell-recognition/assets/118541549/770ce399-af75-40a8-869a-d3b907cb9eff)
+![image](https://github.com/kavyasenthamarai/malaria-cell-recognition/assets/118668727/c81c608d-6b0a-43ac-8dd5-b0cdfd18d3a3)
 
 
 ### Confusion Matrix
 
-![image](https://github.com/Rama-Lekshmi/malaria-cell-recognition/assets/118541549/7a7b85d9-9007-4c98-ba16-796de6213f1d)
+![image](https://github.com/kavyasenthamarai/malaria-cell-recognition/assets/118668727/9eed08bd-1663-44d1-b6b6-87856de1a2e6)
 
 
 ### New Sample Data Prediction
 
-![image](https://github.com/Rama-Lekshmi/malaria-cell-recognition/assets/118541549/9e3701fe-19db-46f4-ad1e-0b9f83c136bb)
+![image](https://github.com/kavyasenthamarai/malaria-cell-recognition/assets/118668727/1d46e50b-3564-4cae-98ca-d822d6e6e3be)
 
 
 
